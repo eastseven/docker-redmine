@@ -42,6 +42,8 @@ cd ${REDMINE_INSTALL_DIR}
 # create version file
 echo "${REDMINE_VERSION}" > ${REDMINE_INSTALL_DIR}/VERSION
 
+echo `pwd`
+echo `ls -l`
 # HACK: we want both the pg and mysql2 gems installed, so we remove the
 #       respective lines and add them at the end of the Gemfile so that they
 #       are both installed.
