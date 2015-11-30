@@ -11,6 +11,8 @@ ENV REDMINE_VERSION=3.1.2 \
 ENV REDMINE_INSTALL_DIR="${REDMINE_HOME}/redmine" \
     REDMINE_DATA_DIR="${REDMINE_HOME}/data"
 
+RUN gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E1DD270288B4E6030699E45FA1715D88E1DF1F24 \
  && echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main" >> /etc/apt/sources.list \
  && apt-key adv --keyserver keyserver.ubuntu.com --recv 80F70E11F0F0D5F10CB20E62F5DA5F09C3173AA6 \
